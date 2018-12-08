@@ -1,20 +1,26 @@
 1. 新建远程仓库
-2.将本地仓库转换成版本库,并将文件添加到版本中:
+2. 将本地仓库转换成版本库,并将文件添加到版本中:
 ```bash
 cd your-project/
 git init
 git add -A xxx
 git commit -m "初始化"
 ```
-3.关联远程仓库:
+3. 关联远程仓库:
 ```bash
 git remote add origin <URL>
 ```
-4.拉取远程仓库
+4. 拉取远程仓库
 ```bash
 git pull origin master --allow-unrelated-histories
 ```
-5.推送本地到远程仓库
+5. 推送本地到远程仓库
 ```bash
 git push -u origin master
 ```
+
+### QA
+Q:fatal: refusing to merge unrelated histories
+
+A:Using --allow-unrelated-histories flag worked with pull request in this way:git pull origin branchname --allow-unrelated-histories
+
